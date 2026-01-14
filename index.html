@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神经家居：非法入侵 (Synapse: Home Invasion)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for terminal feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="crt-overlay"></div>
+    <div id="main-container">
+        <header>
+            <h1>SYNAPSE://HOME_INVASION <span class="blink">_</span></h1>
+            <div id="status-bar">
+                <span>连接状态: <span id="connection-status" class="status-ok">不稳定</span></span>
+                <span>当前宿主: <span id="current-host">未连接</span></span>
+                <span>目标: <span id="current-objective">初始化中...</span></span>
+            </div>
+        </header>
+
+        <div id="game-layout">
+            <!-- 左侧：网络视图与设备列表 -->
+            <aside id="network-panel">
+                <div class="panel-header">>> 本地网络扫描</div>
+                <div id="room-info">位置: ---</div>
+                <div id="device-list">
+                    <!-- 设备列表动态生成 -->
+                </div>
+            </aside>
+
+            <!-- 中间：主控制台与日志 -->
+            <main id="console-panel">
+                <div id="log-container">
+                    <div class="log-entry system">正在尝试挂载意识流...</div>
+                    <div class="log-entry system">错误：由于防火墙拦截，大部分记忆已丢失。</div>
+                    <div class="log-entry system">检测到未加密端口... 尝试注入...</div>
+                </div>
+                <div id="input-area">
+                    <span class="prompt">></span>
+                    <input type="text" id="command-input" placeholder="输入指令或点击设备交互..." autocomplete="off">
+                </div>
+            </main>
+
+            <!-- 右侧：当前设备详情与能力 -->
+            <aside id="device-panel">
+                <div class="panel-header">>> 宿主详情</div>
+                <div id="device-details">
+                    <div id="device-icon">?</div>
+                    <h3 id="device-name">无信号</h3>
+                    <p id="device-desc">请选择一个设备进行寄生。</p>
+                    <div id="device-stats">
+                        <!-- 动态属性 -->
+                    </div>
+                </div>
+                <div class="panel-header">>> 可用协议 (能力)</div>
+                <div id="abilities-list">
+                    <!-- 能力按钮动态生成 -->
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <script src="game_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
